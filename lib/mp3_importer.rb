@@ -1,3 +1,4 @@
+require 'pry'
 class MP3Importer
 
   attr_accessor :path
@@ -9,6 +10,7 @@ class MP3Importer
   # loads all the mp3 files in the path directory
   # normalizes the filename to just the mp3 filename with no path
   def files
+
     Dir.glob("./spec/fixtures/mp3s")#.select {|file| file.end_with?(".mp3")}
   end
 
