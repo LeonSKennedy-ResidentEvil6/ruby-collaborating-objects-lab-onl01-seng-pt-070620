@@ -11,7 +11,7 @@ class MP3Importer
   # normalizes the filename to just the mp3 filename with no path
   def files
 
-    Dir.glob("#{@path}/*.mp3").collect {|file| binding.pry}
+    Dir.glob("#{@path}/*.mp3").collect {|file| file.gsub("./spec/fixtures/mp3s/", "")}
   end
 
   # imports the files into the library by creating songs from a filename
